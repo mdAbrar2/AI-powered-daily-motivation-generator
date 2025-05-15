@@ -1,0 +1,26 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Django
+db.sqlite3
+*.sqlite3
+
+# Environment variables
+.env
+
+# Static and media files (if generated)
+staticfiles/
+media/
+
+# VS Code settings (optional)
+.vscode/
+
+# MacOS system files (optional)
+.DS_Store
+
+# Logs
+*.log
