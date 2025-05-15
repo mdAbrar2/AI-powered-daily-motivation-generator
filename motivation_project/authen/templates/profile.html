@@ -1,0 +1,23 @@
+{% extends "main.html" %}
+{% load static %}
+{% block title %}Profile{% endblock %}
+
+{% block container %}
+<div class="profile-page">
+    <div class="profile-container">
+        <h2>Your Profile</h2>
+        <div class="profile-info">
+            <p><strong>Username:</strong> {{ user.username }}</p>
+            <p><strong>Email:</strong> {{ user.email }}</p>
+            {% if profile.bio %}
+            <p><strong>Bio:</strong> {{ profile.bio }}</p>
+            {% endif %}
+            {% if profile.mood_preference %}
+            <p><strong>Mood Preference:</strong> {{ profile.mood_preference }}</p>
+            {% endif %}
+        </div>
+        <a href="{% url 'edit_profile' %}" class="edit-button">Edit Profile</a>
+        <a href="{% url 'home' %}" class="edit-button">Home</a>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends "main.html" %}
+{% load static %}
+{% block title %}Create Profile{% endblock %}
+
+{% block container %}
+<div class="profile-form-page">
+    <div class="form-container">
+        <h2>Create Your Profile</h2>
+        <form method="POST" action="{% url 'create_profile' %}" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="bio">Bio</label>
+                <textarea id="bio" name="bio" rows="4" placeholder="Tell us about yourself..." required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="profile_picture">Profile Picture</label>
+                <input type="file" id="profile_picture" name="profile_picture">
+            </div>
+            <div class="form-group">
+                <label for="mood_preference">Mood Preference</label>
+                <input type="text" id="mood_preference" name="mood_preference" placeholder="Your favorite mood" required>
+            </div>
+            <button type="submit" class="submit-button">Create Profile</button>
+        </form>
+        <div class="action-buttons">
+        <a href="{% url 'home' %}" class="button">Back to Home</a>
+    </div>
+    </div>
+</div>
+{% endblock %}
