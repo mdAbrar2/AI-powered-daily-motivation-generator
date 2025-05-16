@@ -10,7 +10,7 @@ import sys
 import os
 
 # Add your project directory to the sys.path
-project_home = '/home/yourusername/motivation project'
+project_home = '/home/mdabrardev/AI-powered-daily-motivation-generator'
 if project_home not in sys.path:
     sys.path = [project_home] + sys.path
 
