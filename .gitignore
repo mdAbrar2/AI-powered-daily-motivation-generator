@@ -24,3 +24,6 @@ media/
 
 # Logs
 *.log
+
+__pycache__/
+*.pyc
