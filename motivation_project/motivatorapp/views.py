@@ -30,7 +30,7 @@ def home(request):
 
 
 def welcomePage(request):
-    return render(request,'welcomePage.html')
+    return render(request,'WelcomePage.html')
 
     
 
