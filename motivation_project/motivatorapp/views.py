@@ -89,8 +89,6 @@ def send_motivation_email(request):
     print(result)  # Should print 1 if the email was sent successfully
 
 
-
-
     # Render the start journey page
     return render(request, 'startjourney.html', {'quote': quote})
 
