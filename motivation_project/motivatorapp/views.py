@@ -82,6 +82,7 @@ def send_motivation_email(request):
     result = send_mail(
     subject,
     message,
+
     settings.DEFAULT_FROM_EMAIL,
     [recipient],
     fail_silently=False,
